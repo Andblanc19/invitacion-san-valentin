@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín? 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8bbd0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #880e4f;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            position: relative;
+            animation: pulse 1.5s infinite;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-family: 'Verdana', sans-serif;
+            color: #e91e63;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ad1457;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            color: #880e4f;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .emoji {
+            font-size: 2.5rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #d81b60;
+        }
+
+        .heart {
+            font-size: 50px;
+            color: #e91e63;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: beat 1.5s infinite;
+        }
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.pixabay.com/photo/2017/02/12/13/38/heart-2062411_960_720.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: confettiAnimation 1s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes confettiAnimation {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            margin-top: 20px;
+            color: #ad1457;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>¡Hola! ¿Quieres ser mi San Valentín? 💖</h1>
+        <h2>¡Este 14 de febrero no será lo mismo sin ti! 😍</h2>
+        <p class="emoji">💌✨ ¿Qué dices? ¡Aceptas o no?</p>
+        <div class="buttons">
+            <button class="btn" onclick="showMessage('¡Esoooooo! Gracias por decir sí! Mandame un pantallazo de esto 💖 🎉')">Sí ❤️</button>
+            <button class="btn" onclick="showMessage('¡Oh no! ¿Seguro que no? 😢')">No 😔</button>
+            <button class="btn" onclick="showMessage('¡Interesante! ¿Tal vez? 🤔💭')">Tal vez... 🤔</button>
+        </div>
+        <p class="footer">¡Haz clic en uno de los botones para descubrir qué pasa! 😉</p>
+    </div>
+    <div class="confetti"></div>
+    
+    <script>
+        function showMessage(message) {
+            alert(message);
+        }
+    </script>
+</body>
+</html>
+
+
+
